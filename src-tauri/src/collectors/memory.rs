@@ -36,3 +36,10 @@ impl MemoryCollector {
         }
     }
 }
+
+impl Default for MemoryCollector {
+
+    fn default() -> Self {
+        Self::new()
+    }
+}

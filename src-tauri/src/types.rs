@@ -36,7 +36,8 @@ pub struct DiskInfo {
     pub mount_point: String,
     pub total_bytes: u64,
     pub used_bytes: u64,
-    pub available_bytes: f32,
+    pub available_bytes: u64,
+    pub usage_percent: f32,
     pub file_system: String,
 }
 
