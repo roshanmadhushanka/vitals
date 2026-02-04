@@ -9,7 +9,7 @@ pub struct ProcessCollector {
 impl ProcessCollector {
 
     pub fn new(limit: usize) -> Self {
-        let mut sys = System::new();
+        let sys = System::new();
         Self { sys, limit }
     }
 

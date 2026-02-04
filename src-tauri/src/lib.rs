@@ -1,5 +1,6 @@
 pub mod collectors;
 pub mod types;
+pub mod monitor;
 
 #[tauri::command]
 fn greet(name: &str) -> String {
