@@ -1,10 +1,10 @@
 use std::sync::mpsc::{self, Receiver, Sender};
 use std::sync::{
     atomic::{AtomicBool, Ordering},
-    Arc, Mutex,
+    Arc,
 };
 use std::thread::{self, JoinHandle};
-use std::time::{Duration, Instant, SystemTime, UNIX_EPOCH};
+use std::time::{Duration, SystemTime, UNIX_EPOCH};
 
 use crate::collectors::{
     CpuCollector, DiskCollector, MemoryCollector, NetworkCollector, ProcessCollector,
@@ -116,7 +116,6 @@ impl SystemMonitor {
 }
 
 impl Drop for SystemMonitor {
-
     fn drop(&mut self) {
         self.shutdown();
     }
